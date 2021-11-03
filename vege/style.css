@@ -29,6 +29,7 @@ středně široké obrazovky:
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
 }
 
 .paticka {
@@ -49,3 +50,99 @@ body {
 
 
 /* ------------------------------- */
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.comments {
+    position: absolute;
+    right: 90px;
+}
+
+.item h1 {
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+}
+
+.item h2 {
+    position: absolute;
+    bottom: -10px;
+}
+
+.item p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    position: absolute;
+}
+
+.item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.item1 {
+    background: url(images/salat.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    min-height: 200px;
+    position: relative;
+}
+
+.mini {
+    min-height: 90px;
+}
+
+.item2 {
+    background: url(images/chlebicek.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+}
+
+.item3 {
+    background: url(images/cizrna.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+}
+
+.item4 {
+    background: url(images/tacos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+}
+
+.item5 {
+    background: url(images/burger.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100%;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
