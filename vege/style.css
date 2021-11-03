@@ -1,9 +1,18 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+ ::after,
+ ::before {
+    box-sizing: inherit;
+}
 
 
 /* -------------------------------------------------- */
+
 
 /*
 pouzivame mobile first pristup
@@ -16,7 +25,6 @@ středně široké obrazovky:
 @media (min-width: 860px) {
 }
 */
-
 
 body {
     margin: 0;
@@ -35,5 +43,9 @@ body {
 
 
 /* ------------------------------- */
+
+
 /* ----- DOLE BUDE TVOJE CSS ----- */
+
+
 /* ------------------------------- */
