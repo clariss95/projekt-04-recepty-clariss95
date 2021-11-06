@@ -36,6 +36,12 @@ body {
     text-align: center;
     font-size: 14px;
     color: silver;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.paticka p {
+    text-shadow: none;
 }
 
 .paticka a {
@@ -51,22 +57,28 @@ body {
 
 /* ------------------------------- */
 
+
+/*mobile first - iphone5/se*/
+
 h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 1.75rem;
     font-weight: 800;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
     font-weight: 800;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 p {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 0.8rem;
     font-weight: 400;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .comments {
@@ -94,6 +106,11 @@ p {
 .item {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    position: relative;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid white;
+    /*nevím jak jinak oddělit obrázky bílou čárou - zkusila jsem justify-contect: space-between ale nic se nestalo. když používám gap:1px tak přestane z nějakého důvodu fungovat flexwrap a obrázky jsou pod sebou místo 2x2.  proto používám border, ale určitě existuje elegantnější řešení?*/
 }
 
 .item1 {
@@ -102,7 +119,6 @@ p {
     background-position: center;
     background-size: 100%;
     min-height: 200px;
-    position: relative;
 }
 
 .mini {
@@ -114,7 +130,6 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    position: relative;
 }
 
 .item3 {
@@ -122,7 +137,6 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    position: relative;
 }
 
 .item4 {
@@ -130,7 +144,6 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    position: relative;
 }
 
 .item5 {
@@ -138,11 +151,87 @@ p {
     background-repeat: no-repeat;
     background-position: left;
     background-size: 100%;
-    position: relative;
 }
 
-.container {
+.kontejner {
     display: flex;
-    flex-direction: column;
-    gap: 1px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+/*tablet*/
+
+@media (min-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .item1 {
+        min-height: 250px;
+    }
+    .item2,
+    .item3,
+    .item4,
+    .item5 {
+        width: 50%;
+        min-height: 150px;
+    }
+    .item {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .item2 {
+        order: 1;
+        border-right: 1px solid white;
+    }
+    .item3 {
+        order: 3;
+        border-right: 1px solid white;
+    }
+    .item4 {
+        order: 2;
+    }
+    .item5 {
+        order: 4;
+    }
+    footer {
+        order: 5;
+    }
+}
+
+
+/*pc*/
+
+@media (min-width: 860px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    .item {
+        width: 33.33%;
+    }
+    .item1 {
+        min-height: 400px;
+    }
+    .item2,
+    .item3,
+    .item4,
+    .item5 {
+        min-height: 200px;
+        flex-grow: 2;
+        border-left: 1px solid white;
+        border-right: none;
+    }
+    .kontejner {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 400px;
+        /*bez nastavení výšky se mi nepovedlo roztáhnout obsah do dvou sloupců - 1.sloupec = velký obrázek, 2.sloupec = 2x2 obrázky, zároveň ale kvůli výšce vychází jen tak na čtvrtku stránky .. a vypadá to dobře jen od rozlišení cca. 1400x800 - když je rozlišení nižší nevyplňuje velký obrázek (item1) celý box, ale má shora a zespodu bílé okraje. 
+        prosím o pomoooc :) */
+    }
 }
