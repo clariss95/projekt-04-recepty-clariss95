@@ -149,7 +149,7 @@ p {
 .item5 {
     background: url(images/burger.jpg);
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     background-size: 100%;
 }
 
