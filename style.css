@@ -60,25 +60,26 @@ body {
 
 /*mobile first - iphone5/se*/
 
-h1 {
+h1,
+h2,
+p {
     font-family: 'Raleway', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+h1 {
     font-size: 1.75rem;
     font-weight: 800;
-    text-shadow: 2px 2px 4px #000000;
 }
 
 h2 {
-    font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
     font-weight: 800;
-    text-shadow: 2px 2px 4px #000000;
 }
 
 p {
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 0.8rem;
     font-weight: 400;
-    text-shadow: 2px 2px 4px #000000;
 }
 
 .comments {
@@ -117,40 +118,31 @@ p {
     background: url(images/salat.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     min-height: 200px;
 }
 
 .mini {
     min-height: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .item2 {
     background: url(images/chlebicek.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
 }
 
 .item3 {
     background: url(images/cizrna.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
 }
 
 .item4 {
     background: url(images/tacos.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
 }
 
 .item5 {
     background: url(images/burger.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
 }
 
 .kontejner {
@@ -197,9 +189,6 @@ p {
     .item5 {
         order: 4;
     }
-    footer {
-        order: 5;
-    }
 }
 
 
@@ -218,12 +207,8 @@ p {
     .item1 {
         min-height: 400px;
     }
-    .item2,
-    .item3,
-    .item4,
-    .item5 {
+    .mini {
         min-height: 200px;
-        flex-grow: 2;
         border-left: 1px solid white;
         border-right: none;
     }
